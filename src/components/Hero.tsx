@@ -56,15 +56,6 @@ export const Hero: React.FC<HeroProps> = ({ onWhatsAppClick, onCallClick }) => {
             <span className="hidden xs:inline">WhatsApp Now</span>
             <span className="inline xs:hidden">WhatsApp</span>
           </button>
-          <a
-            onClick={onCallClick}
-            className="inline-flex items-center justify-center gap-1.5 md:gap-2 px-4 md:px-7 py-3 md:py-4 border border-black text-black text-[11px] md:text-[13px] font-medium tracking-[0.5px] hover:border-red hover:text-red transition-all duration-300 hover:shadow-lg whitespace-nowrap active:scale-95 cursor-pointer"
-          >
-            <span>Request Quote</span>
-            <svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M5 12h14M12 5l7 7-7 7" />
-            </svg>
-          </a>
         </div>
 
         {/* Phone Number */}
