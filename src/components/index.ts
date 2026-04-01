@@ -1,0 +1,10 @@
+export { Navbar } from './Navbar';
+export { Hero } from './Hero';
+export { Differentiation } from './Differentiation';
+export { SpeedPromise } from './SpeedPromise';
+export { Services } from './Services';
+export { HowItWorks } from './HowItWorks';
+export { Trust } from './Trust';
+export { Testimonials } from './Testimonials';
+export { WhatsAppButton } from './WhatsAppButton';
+export { Footer } from './Footer';

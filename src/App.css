@@ -1,0 +1,324 @@
+/* Global Styles & Animations */
+
+* {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+  background: #ffffff;
+  color: #1a1a1a;
+}
+
+/* Elegant Typography */
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Playfair Display', serif;
+  letter-spacing: -0.5px;
+  font-weight: 700;
+}
+
+h1 {
+  font-size: clamp(2rem, 8vw, 4.5rem);
+  line-height: 1.1;
+}
+
+h2 {
+  font-size: clamp(1.8rem, 5vw, 3.5rem);
+  line-height: 1.15;
+}
+
+h3 {
+  font-size: clamp(1.3rem, 3vw, 2rem);
+  line-height: 1.2;
+}
+
+p {
+  line-height: 1.65;
+  letter-spacing: 0.3px;
+}
+
+/* Smooth Link Transitions */
+a {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Button Base Styles */
+button {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+button::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  transform: translate(-50%, -50%);
+  transition: width 0.6s, height 0.6s;
+}
+
+button:active::before {
+  width: 300px;
+  height: 300px;
+}
+
+/* Input Focus States */
+input:focus,
+textarea:focus {
+  transition: all 0.3s ease;
+  box-shadow: 0 0 0 3px rgba(235, 38, 82, 0.1);
+}
+
+/* Stagger Animation for Cards */
+.stagger-children > * {
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+.stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
+.stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
+.stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
+.stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
+.stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+.stagger-children > *:nth-child(6) { animation-delay: 0.6s; }
+
+/* Scroll Observer for Section Reveals */
+.section-reveal {
+  opacity: 0;
+  animation: fadeUp 0.8s ease-out forwards;
+}
+
+/* Premium Card Hover Effect */
+.card-hover {
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card-hover:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Elegant Border Separator */
+.border-elegant {
+  border-color: rgba(230, 227, 227, 0.5);
+  transition: border-color 0.3s ease;
+}
+
+.border-elegant:hover {
+  border-color: rgba(235, 38, 82, 0.3);
+}
+
+/* Highlight Text Animation */
+.highlight-red {
+  background: linear-gradient(120deg, #EB2652, #ff6b7a);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Gradient Underline */
+.underline-gradient {
+  position: relative;
+  display: inline-block;
+}
+
+.underline-gradient::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #EB2652, #ff6b7a);
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.underline-gradient:hover::after {
+  opacity: 1;
+}
+
+/* Loading Animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes floatSlow {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes scrollBounce {
+  0%, 100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0.7;
+    transform: translateY(-10px);
+  }
+}
+
+/* Floating animations */
+.float-animation {
+  animation: float 4s ease-in-out infinite;
+}
+
+.float-slow {
+  animation: floatSlow 5s ease-in-out infinite;
+}
+
+.scroll-bounce {
+  animation: scrollBounce 2s ease-in-out infinite;
+}
+
+/* Scroll-triggered section animations */
+@keyframes slideUpOnScroll {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.scroll-section[data-aos="fade-up"] {
+  animation: slideUpOnScroll 0.8s ease-out forwards;
+}
+
+/* Scroll-triggered animation class (added by Intersection Observer hook) */
+.animate-on-scroll {
+  animation: slideUpOnScroll 0.8s ease-out forwards !important;
+}
+
+/* Minimal entrance animations */
+.entrance-fade {
+  animation: fadeIn 0.6s ease-out;
+}
+
+.entrance-slide-left {
+  animation: slideInLeft 0.6s ease-out;
+}
+
+.entrance-slide-right {
+  animation: slideInRight 0.6s ease-out;
+}
+
+.entrance-scale {
+  animation: scaleIn 0.5s ease-out;
+}
+
+/* Hover animations for buttons */
+button:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Smooth hover for links */
+a:hover {
+  text-decoration: none;
+}
+
+/* Subtle glow on focus */
+button:focus,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+/* Card entrance animation */
+.animate-card {
+  animation: scaleIn 0.5s ease-out;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2.2rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+  }
+}
