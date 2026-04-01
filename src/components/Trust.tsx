@@ -42,7 +42,7 @@ const features: TrustFeature[] = [
 
 export const Trust: React.FC = () => {
   return (
-    <section className="w-full py-12 md:py-32 px-4 md:px-8 bg-white scroll-section-trigger">
+    <section id="trust" className="w-full py-12 md:py-32 px-4 md:px-8 bg-white scroll-section-trigger">
       <div className="max-w-6xl mx-auto">
         {/* Section title */}
         <div className="text-center mb-12 md:mb-20">

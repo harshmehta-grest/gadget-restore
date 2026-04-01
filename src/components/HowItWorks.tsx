@@ -37,7 +37,7 @@ const steps: Step[] = [
 
 export const HowItWorks: React.FC = () => {
   return (
-    <section className="w-full py-12 md:py-32 px-4 md:px-8 bg-neutral-50 scroll-section-trigger">
+    <section id="how-it-works" className="w-full py-12 md:py-32 px-4 md:px-8 bg-neutral-50 scroll-section-trigger">
       <div className="max-w-6xl mx-auto">
         {/* Section title */}
         <div className="text-center mb-12 md:mb-24">

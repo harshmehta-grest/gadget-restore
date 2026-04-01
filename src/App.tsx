@@ -34,7 +34,7 @@ function App() {
   return (
     <div className="w-full bg-white">
       {/* Navbar */}
-      <Navbar />
+      <Navbar onCallClick={handleCallClick} onWhatsAppClick={handleWhatsAppClick} />
 
       {/* Hero Section */}
       <Hero onWhatsAppClick={handleWhatsAppClick} onCallClick={handleCallClick} />

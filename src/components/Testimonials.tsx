@@ -34,7 +34,7 @@ const testimonials: Testimonial[] = [
 
 export const Testimonials: React.FC = () => {
   return (
-    <section className="w-full py-32 px-4 bg-neutral-50 scroll-section-trigger">
+    <section id="testimonials" className="w-full py-32 px-4 bg-neutral-50 scroll-section-trigger">
       <div className="max-w-6xl mx-auto">
         {/* Section title */}
         <div className="text-center mb-20">
