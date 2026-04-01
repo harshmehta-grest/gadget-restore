@@ -37,7 +37,7 @@ function App() {
       <Navbar onCallClick={handleCallClick} onWhatsAppClick={handleWhatsAppClick} />
 
       {/* Hero Section */}
-      <Hero onWhatsAppClick={handleWhatsAppClick} onCallClick={handleCallClick} />
+      <Hero onWhatsAppClick={handleWhatsAppClick} />
 
       {/* Differentiation Section */}
       <Differentiation />

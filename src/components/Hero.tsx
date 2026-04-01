@@ -2,10 +2,9 @@ import React from 'react';
 
 interface HeroProps {
   onWhatsAppClick: () => void;
-  onCallClick: () => void;
 }
 
-export const Hero: React.FC<HeroProps> = ({ onWhatsAppClick, onCallClick }) => {
+export const Hero: React.FC<HeroProps> = ({ onWhatsAppClick }) => {
   return (
     <section
       style={{ fontFamily: "'DM Sans', sans-serif" }}
